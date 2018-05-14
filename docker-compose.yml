@@ -7,4 +7,9 @@ services:
       - 4000:4000
     volumes:
       - ./:/usr/src/app
+    networks:
+      - boolio
+networks:
+  boolio:
+    external: true
 
