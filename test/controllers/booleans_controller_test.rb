@@ -12,7 +12,7 @@ class BooleansControllerTest < ActionDispatch::IntegrationTest
 
   test "should create boolean" do
     assert_difference('Boolean.count') do
-      post booleans_url, params: { boolean: { id: @boolean.id, name: @boolean.name, val: @boolean.val } }, as: :json
+      post booleans_url, params: { boolean: { name: @boolean.name, val: @boolean.val } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class BooleansControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update boolean" do
-    patch boolean_url(@boolean), params: { boolean: { id: @boolean.id, name: @boolean.name, val: @boolean.val } }, as: :json
+    patch boolean_url(@boolean), params: { boolean: { name: @boolean.name, val: @boolean.val } }, as: :json
     assert_response 200
   end
 
