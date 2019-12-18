@@ -1,4 +1,4 @@
-FROM ruby
+FROM ruby:2.5.7
 
 WORKDIR /usr/src/app
 
@@ -11,4 +11,3 @@ RUN bundle install
 COPY . .
 
 CMD ["rails", "s", "-b", "0.0.0.0", "-p", "4000"]
-
