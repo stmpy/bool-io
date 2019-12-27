@@ -1,8 +1,8 @@
-FROM ruby:2.5.7
+FROM ruby:2.5.5
 
 WORKDIR /usr/src/app
 
-RUN gem install rails
+RUN gem install bundler
 
 COPY Gemfile Gemfile.lock ./
 
