@@ -47,6 +47,6 @@ class BooleansController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def boolean_params
-      params.require(:boolean).permit(:id, :name, :val)
+      params.require(:boolean).permit(:id, :name, :value)
     end
 end

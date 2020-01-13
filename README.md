@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RESTful API interface to create booleans
 
-Things you may want to cover:
+## Paths
+/booleans: `create`,`read`,`update`,`delete`
 
-* Ruby version
+### `GET` /booleans
+returns list of booleans stored in sqlite3 database
 
-* System dependencies
+### `POST` /booleans
+`{ "booleans": {
+    "value": true,
+    "name": <optional>
+   }
+}`
 
-* Configuration
+### `PUT`/`PATCH` /booleans
+`{ "booleans": {
+    "id": <uid>,
+    "value": true
+   }
+}`
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+Build
+`docker build -t boolio-api ./`
 
-* Services (job queues, cache servers, search engines, etc.)
+Run
+`docker run -it -p 4000:4000 --rm --name boolio-api boolio-api`
 
-* Deployment instructions
-
-* ...
+exposes on port 4000, 

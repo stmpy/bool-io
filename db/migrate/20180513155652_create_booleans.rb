@@ -3,7 +3,7 @@ class CreateBooleans < ActiveRecord::Migration[5.2]
     create_table :booleans, id: false do |t|
       t.string :id, null: false
       t.string :name
-      t.boolean :val, default: false
+      t.boolean :value, default: false
 
       t.timestamps
     end
